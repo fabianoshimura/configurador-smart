@@ -59,11 +59,11 @@
         "inputRequired": "Input is required."
     },
     "field": {
-        "language": "Language",
-        "emailAddress": "E-mail address",
+        "language": "Língua",
+        "emailAddress": "E-mail",
         "name": "Your name",
-        "password": "Password",
-        "passwordRepeat": "Repeat password"
+        "password": "Senha",
+        "passwordRepeat": "Repetir senha"
     },
     "invitationTitle": "Invitation",
     "invitationMessage": "{invitedBy} has invited you to join {group}.",
@@ -192,8 +192,8 @@
     },
     "dashboard": {
         "title": "Dashboard",
-        "alertTitle": "We need your help!",
-        "alertText": "teste2",
+        "alertTitle": "Observatório Municipal da Pessoa com Deficiência",
+        "alertText": "Configurador Smart",
         "tweetContent": "Check out @baserow an open source no-code database tool and Airtable alternative!",
         "redditTitle": "'Baserow - An open source no-code database",
         "noGroupTitle": "No groups found",
@@ -208,27 +208,27 @@
     },
     "login": {
         "title": "Login",
-        "forgotPassword": "Forgot password"
+        "forgotPassword": "Esqueci a senha"
     },
     "resetPassword": {
-        "title": "Reset password",
-        "newPassword": "New password",
-        "repeatNewPassword": "Repeat new password",
-        "submit": "Change password",
-        "changed": "Password changed",
-        "errorInvalidLinkTitle": "Invalid link",
-        "errorInvalidLinkMessage": "Could not reset the password because the link is invalid.",
-        "errorLinkExpiredTitle": "Link expired",
-        "errorLinkExpiredMessage": "The password reset link has expired. Please request another one."
+        "title": "Renovar senha",
+        "newPassword": "Nova senha",
+        "repeatNewPassword": "Repita nova senha",
+        "submit": "Mudar senha",
+        "changed": "Senha alterada",
+        "errorInvalidLinkTitle": "Link inválido",
+        "errorInvalidLinkMessage": "Não é possível resetar a senha pois o link é inválido",
+        "errorLinkExpiredTitle": "Link expirado",
+        "errorLinkExpiredMessage": "O link para a mudança de senha foi expirado. Tente novamente."
     },
     "signup": {
-        "headTitle": "Create new account",
-        "title": "Sign up",
-        "disabled": "Sign up is disabled",
-        "disabledMessage": "It's not possible to create an account because it has been disabled."
+        "headTitle": "Criar conta",
+        "title": "Criar conta",
+        "disabled": "Criar conta está desabilitada",
+        "disabledMessage": "Não é possível criar uma conta pois esta função está desabilitada"
     },
     "forgotPassword": {
-        "title": "Forgot password",
+        "title": "Recuperar a senha",
         "message": "Please enter your e-mail address in the form. If we find an account then we will send an e-mail with a link to reset your password.",
         "submit": "Send link",
         "confirmation": "If your email address exists in our database, you will receive a password reset link at your email address in a few minutes."

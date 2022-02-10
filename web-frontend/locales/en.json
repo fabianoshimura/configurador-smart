@@ -7,28 +7,28 @@
     },
     "action": {
         "upload": "Upload",
-        "back": "Back",
-        "backToLogin": "Back to login",
-        "signUp": "Sign up",
-        "signIn": "Sign in",
+        "back": "Voltar",
+        "backToLogin": "Voltar para login",
+        "signUp": "Cadastrar",
+        "signIn": "Entrar",
         "createNew": "Criar novo database",
         "create": "Criar",
         "edit": "Editar",
         "change": "Change",
         "delete": "Deletar",
         "rename": "Renomear",
-        "add": "Add",
+        "add": "Adicionar",
         "makeChoice": "Make a choice",
-        "cancel": "Cancel",
-        "save": "Save",
-        "retry": "Retry",
-        "search": "Search",
-        "copy": "Copy",
-        "activate": "Activate",
-        "deactivate": "Deactivate"
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "retry": "Tentar novamente",
+        "search": "Buscar",
+        "copy": "Copiar",
+        "activate": "Ativar",
+        "deactivate": "Desativar"
     },
     "adminType": {
-        "settings": "Settings"
+        "settings": "Configurações"
     },
     "applicationType": {
         "database": "Database",
@@ -36,47 +36,47 @@
         "cantSelectTableDescription": "The database couldn't be selected because it doesn't have any tables. Use the sidebar to create one."
     },
     "settingType": {
-        "account": "Account",
-        "password": "Password",
+        "account": "Conta",
+        "password": "Senha",
         "tokens": "API Tokens"
     },
     "userFileUploadType": {
-        "file": "my device",
-        "url": "a URL"
+        "file": "meu dispositivo",
+        "url": "um URL"
     },
     "field": {
-        "emailAddress": "E-mail address"
+        "emailAddress": "E-mail"
     },
     "error": {
-        "invalidEmail": "Please enter a valid e-mail address.",
-        "notMatchingPassword": "This field must match your password field.",
+        "invalidEmail": "Insira um endereço de email válido",
+        "notMatchingPassword": "Este campo deve estar de acordo com sua senha",
         "minLength": "A minimum of {min} characters is required here.",
         "maxLength": "A maximum of {max} characters is allowed here.",
         "minMaxLength": "A minimum of {min} and a maximum of {max} characters is allowed here.",
-        "requiredField": "This field is required."
+        "requiredField": "Este campo deve ser preenchido."
     },
     "permission": {
-        "admin": "Admin",
+        "admin": "Administrador",
         "adminDescription": "Can fully configure and edit groups and applications.",
-        "member": "Member",
+        "member": "Membro",
         "memberDescription": "Can fully configure and edit applications."
     },
     "fieldType": {
-        "singleLineText": "Single line text",
-        "longText": "Long text",
-        "linkToTable": "Link to table",
-        "number": "Number",
+        "singleLineText": "Texto curto",
+        "longText": "Texto longo",
+        "linkToTable": "Link para tabela",
+        "number": "Número",
         "rating": "Rating",
         "boolean": "Boolean",
-        "date": "Date",
-        "lastModified": "Last modified",
-        "createdOn": "Created on",
+        "date": "Data",
+        "lastModified": "Última modificação",
+        "createdOn": "Criado em",
         "url": "URL",
         "email": "Email",
-        "file": "File",
+        "file": "Arquivo",
         "singleSelect": "Single select",
         "multipleSelect": "Multiple select",
-        "phoneNumber": "Phone number",
+        "phoneNumber": "Número de telefone",
         "formula": "Formula",
         "lookup": "Lookup"
     },
@@ -147,14 +147,14 @@
         }
     },
     "premium": {
-        "deactivated": "Available in premium version"
+        "deactivated": "Não disponível no momento"
     },
     "trashType": {
-        "group": "group",
-        "application": "application",
-        "table": "table",
-        "field": "field",
-        "row": "row"
+        "group": "grupo",
+        "application": "aplicação",
+        "table": "tabela",
+        "field": "campo",
+        "row": "linha"
     },
     "webhook": {
         "request": "Request",

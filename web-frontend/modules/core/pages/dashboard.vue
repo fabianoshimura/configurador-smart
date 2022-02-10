@@ -1,5 +1,82 @@
 <template>
   <div class="layout__col-2-scroll">
+    <div
+      class="
+        alert alert--simple alert--warning alert--has-icon
+        dashboard__alert
+      "
+    >
+      <!-- <div class="alert__icon">
+        <i class="fas fa-file-spreadsheet"></i>
+      </div> -->
+
+      <div class="alert__title">{{ $t('dashboard.alertTitle') }}</div>
+      <p class="alert__content">
+        {{ $t('dashboard.alertText') }}
+      </p>
+      <!-- <a
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        {{ $t('dashboard.becomeGithubSponsor') }}
+        <i class="fa fa-heart"></i>
+      </a> -->
+      <!-- <a
+        href="https://gitlab.com/bramw/baserow"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        {{ $t('dashboard.starOnGitlab') }}
+        <i class="fab fa-gitlab"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnTwitter')"
+        :href="
+          'https://twitter.com/intent/tweet?url=https://baserow.io' +
+          '&hashtags=opensource,nocode,database,baserow&text=' +
+          encodeURI($t('dashboard.tweetContent'))
+        "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-twitter"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnReddit')"
+        :href="
+          'https://www.reddit.com/submit?url=https://baserow.io&title=' +
+          encodeURI($t('dashboard.redditTitle'))
+        "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-reddit"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnFacebook')"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://baserow.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-facebook"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnLinkedIn')"
+        href="https://www.linkedin.com/sharing/share-offsite/?url=https://baserow.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a> -->
+    </div>
+
     <!-- <div
       class="
         alert alert--simple alert--warning alert--has-icon
@@ -75,6 +152,7 @@
         <i class="fab fa-linkedin"></i>
       </a>
     </div> -->
+
     <GroupInvitation
       v-for="invitation in groupInvitations"
       :key="'invitation-' + invitation.id"
