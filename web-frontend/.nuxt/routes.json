@@ -1,0 +1,133 @@
+[
+  {
+    "name": "index",
+    "path": "",
+    "component": "/baserow/web-frontend/modules/core/pages/index.vue",
+    "_name": "_97edb5c8"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/baserow/web-frontend/modules/core/pages/login.vue",
+    "_name": "_7db0c833"
+  },
+  {
+    "name": "signup",
+    "path": "/signup",
+    "component": "/baserow/web-frontend/modules/core/pages/signup.vue",
+    "_name": "_f67ba984"
+  },
+  {
+    "name": "forgot-password",
+    "path": "/forgot-password",
+    "component": "/baserow/web-frontend/modules/core/pages/forgotPassword.vue",
+    "_name": "_bd69aff8"
+  },
+  {
+    "name": "reset-password",
+    "path": "/reset-password/:token",
+    "component": "/baserow/web-frontend/modules/core/pages/resetPassword.vue",
+    "_name": "_2bd7cb54"
+  },
+  {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "/baserow/web-frontend/modules/core/pages/dashboard.vue",
+    "_name": "_62798cde"
+  },
+  {
+    "name": "group-invitation",
+    "path": "/group-invitation/:token",
+    "component": "/baserow/web-frontend/modules/core/pages/groupInvitation.vue",
+    "_name": "_a6210b7c"
+  },
+  {
+    "name": "admin-settings",
+    "path": "/admin/settings",
+    "component": "/baserow/web-frontend/modules/core/pages/admin/settings.vue",
+    "_name": "_6815d189"
+  },
+  {
+    "name": "style-guide",
+    "path": "/style-guide",
+    "component": "/baserow/web-frontend/modules/core/pages/styleGuide.vue",
+    "_name": "_54bdc571"
+  },
+  {
+    "name": "health-check",
+    "path": "/_health",
+    "component": "/baserow/web-frontend/modules/core/pages/_health.vue",
+    "_name": "_3c2f9ac5"
+  },
+  {
+    "name": "database-table",
+    "path": "/database/:databaseId/table/:tableId/:viewId?",
+    "component": "/baserow/web-frontend/modules/database/pages/table.vue",
+    "_name": "_5dc2e574"
+  },
+  {
+    "path": "/api/docs",
+    "redirect": "/api-docs",
+    "_name": "_29172c1a"
+  },
+  {
+    "path": "/api/docs/database/:databaseId",
+    "redirect": "/api-docs/database/:databaseId",
+    "_name": "_29172c1a"
+  },
+  {
+    "name": "database-api-docs",
+    "path": "/api-docs",
+    "alias": "/api/docs",
+    "component": "/baserow/web-frontend/modules/database/pages/APIDocs.vue",
+    "_name": "_69136c0a"
+  },
+  {
+    "name": "database-api-docs-detail",
+    "path": "/api-docs/database/:databaseId",
+    "component": "/baserow/web-frontend/modules/database/pages/APIDocsDatabase.vue",
+    "_name": "_c2a131d4"
+  },
+  {
+    "name": "database-table-form",
+    "path": "/form/:slug",
+    "component": "/baserow/web-frontend/modules/database/pages/form.vue",
+    "_name": "_e34194e4"
+  },
+  {
+    "name": "database-public-grid-view",
+    "path": "/public/grid/:slug",
+    "component": "/baserow/web-frontend/modules/database/pages/publicGridView.vue",
+    "_name": "_62316ede"
+  },
+  {
+    "name": "admin-dashboard",
+    "path": "/admin/dashboard",
+    "component": "/baserow/premium/web-frontend/modules/baserow_premium/pages/admin/dashboard.vue",
+    "_name": "_39863ebe"
+  },
+  {
+    "name": "admin-users",
+    "path": "/admin/users",
+    "component": "/baserow/premium/web-frontend/modules/baserow_premium/pages/admin/users.vue",
+    "_name": "_5f63a132"
+  },
+  {
+    "name": "admin-groups",
+    "path": "/admin/groups",
+    "component": "/baserow/premium/web-frontend/modules/baserow_premium/pages/admin/groups.vue",
+    "_name": "_48d3701a"
+  },
+  {
+    "name": "admin-licenses",
+    "path": "/admin/licenses",
+    "component": "/baserow/premium/web-frontend/modules/baserow_premium/pages/admin/licenses.vue",
+    "_name": "_223b7818"
+  },
+  {
+    "name": "admin-license",
+    "path": "/admin/license/:id",
+    "component": "/baserow/premium/web-frontend/modules/baserow_premium/pages/admin/license.vue",
+    "_name": "_4b4ef66b"
+  }
+]
