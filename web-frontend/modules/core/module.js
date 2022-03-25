@@ -4,8 +4,6 @@ import serveStatic from 'serve-static'
 
 import { routes } from './routes'
 import head from './head'
-import en from './locales/en.json'
-import fr from './locales/fr.json'
 
 export default function CoreModule(options) {
   /**
@@ -54,15 +52,6 @@ export default function CoreModule(options) {
           default: null,
         },
         {
-          // Set to `1` to force download links to download files via XHR query
-          // to bypass `Content-Disposition: inline` that can't be overridden
-          // in another way.
-          // If your files are stored under another origin, you also
-          // must add CORS headers to your server.
-          key: 'DOWNLOAD_FILE_VIA_XHR',
-          default: false,
-        },
-        {
           // If you change this default please also update the default for the
           // backend found in src/baserow/config/settings/base.py:321
           key: 'HOURS_UNTIL_TRASH_PERMANENTLY_DELETED',
@@ -76,14 +65,16 @@ export default function CoreModule(options) {
     },
   ])
 
+  // Use feature flag to enable i18n
   const locales = [
-    { code: 'en', name: 'English', file: 'en.json' },
-    { code: 'fr', name: 'Français', file: 'fr.json' },
+    { code: 'en', name: 'English', file: 'en.js' },
+    { code: 'fr', name: 'Français', file: 'fr.js' },
   ]
 
   this.requireModule([
     '@nuxtjs/i18n',
     {
+      vueI18nLoader: true,
       strategy: 'no_prefix',
       defaultLocale: 'en',
       detectBrowserLanguage: {
@@ -98,10 +89,6 @@ export default function CoreModule(options) {
       },
     },
   ])
-
-  this.nuxt.hook('i18n:extend-messages', function (additionalMessages) {
-    additionalMessages.push({ en, fr })
-  })
 
   // Serve the static directory
   // @TODO we might need to change some things here for production. (See:

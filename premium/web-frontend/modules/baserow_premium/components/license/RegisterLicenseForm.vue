@@ -47,3 +47,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "registerLicenseForm": {
+      "licenseKey": "License key"
+    }
+  },
+  "fr": {
+    "registerLicenseForm": {
+      "licenseKey": "Clé de licence"
+    }
+  }
+}
+</i18n>

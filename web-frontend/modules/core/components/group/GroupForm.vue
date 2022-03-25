@@ -48,3 +48,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "groupForm": {
+      "nameLabel": "Name"
+    }
+  },
+  "fr": {
+    "groupForm": {
+      "nameLabel": "Nom"
+    }
+  }
+}
+</i18n>

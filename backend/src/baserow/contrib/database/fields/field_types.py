@@ -55,7 +55,6 @@ from baserow.contrib.database.validators import UnicodeRegexValidator
 from baserow.core.models import UserFile
 from baserow.core.user_files.exceptions import UserFileDoesNotExist
 from baserow.core.user_files.handler import UserFileHandler
-from baserow.contrib.database.table.cache import invalidate_single_table_in_model_cache
 from .dependencies.exceptions import (
     SelfReferenceFieldDependencyError,
     CircularFieldDependencyError,
@@ -1405,7 +1404,7 @@ class LinkRowFieldType(FieldType):
     ):
         getattr(row, field_name).set(value)
 
-    def get_other_fields_to_trash_restore_always_together(self, field) -> List[Any]:
+    def get_related_fields_to_trash_and_restore(self, field) -> List[Any]:
         return [field.link_row_related_field]
 
     def to_baserow_formula_type(self, field) -> BaserowFormulaType:
@@ -1436,13 +1435,6 @@ class LinkRowFieldType(FieldType):
             ]
         else:
             return []
-
-    # noinspection PyMethodMayBeStatic
-    def before_table_model_invalidated(
-        self,
-        field: Field,
-    ):
-        invalidate_single_table_in_model_cache(field.link_row_table_id)
 
 
 class EmailFieldType(CharFieldMatchingRegexFieldType):

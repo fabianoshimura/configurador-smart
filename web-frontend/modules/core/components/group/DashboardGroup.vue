@@ -23,12 +23,12 @@
         :group="group"
         @rename="enableRename()"
       ></GroupContext>
-      <!-- <a
+      <a
         v-if="group.permissions === 'ADMIN'"
         class="dashboard__group-link"
         @click="$refs.context.showGroupMembersModal()"
         >{{ $t('dashboardGroup.showMembers') }}</a
-      > -->
+      >
     </div>
     <ul class="dashboard__group-items">
       <li
@@ -108,3 +108,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "dashboardGroup":{
+      "showMembers": "Members",
+      "createApplication": "Create new"
+    }
+  },
+  "fr":{
+    "dashboardGroup":{
+      "showMembers": "Membres",
+      "createApplication": "Créer"
+    }
+  }
+}
+</i18n>

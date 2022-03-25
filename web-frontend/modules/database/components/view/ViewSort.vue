@@ -58,3 +58,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "viewSort":{
+      "sort": "Sort | 1 Sort | {count} Sorts"
+    }
+  },
+  "fr":{
+    "viewSort":{
+      "sort": "Tri | 1 Tri | {count} Tris"
+    }
+  }
+}
+</i18n>

@@ -63,3 +63,20 @@ export default {
   methods: {},
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "apiDocsTableGetRow":{
+      "description": "Fetch a single {name} row.",
+      "rowId": "The unique identifier of the row that is requested."
+    }
+  },
+  "fr": {
+    "apiDocsTableGetRow":{
+      "description": "Retourne une ligne de la table {name}.",
+      "rowId": "L'identifiant unique de la ligne demandée."
+    }
+  }
+}
+</i18n>

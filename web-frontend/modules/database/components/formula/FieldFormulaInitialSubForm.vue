@@ -93,3 +93,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "fieldFormulaInitialSubForm" : {
+      "formulaInputPlaceholder": "Click to edit the formula",
+      "refreshFormulaOptions": "Refresh formula options"
+    }
+  },
+  "fr": {
+    "fieldFormulaInitialSubForm" : {
+      "formulaInputPlaceholder": "Cliquez pour éditer la formule",
+      "refreshFormulaOptions": "Rafraichir les options"
+    }
+  }
+}
+</i18n>

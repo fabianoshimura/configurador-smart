@@ -119,3 +119,28 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "groupsAdminTable": {
+      "allGroups": "All groups",
+      "id": "ID",
+      "name":"Name",
+      "members": "Members",
+      "applications": "Applications",
+      "created": "Created"
+    }
+  },
+  "fr": {
+    "groupsAdminTable": {
+      "allGroups": "Liste des groupes",
+      "id": "ID",
+      "name":"Nom",
+      "members": "Membres",
+      "applications": "Applications",
+      "created": "Créé le"
+    }
+  }
+}
+</i18n>

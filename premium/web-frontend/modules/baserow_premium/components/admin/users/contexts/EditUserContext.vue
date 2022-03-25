@@ -131,3 +131,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "editUserContext": {
+      "changePassword": "Change password",
+      "delete": "Permanently delete"
+    }
+  },
+  "fr": {
+    "editUserContext": {
+      "changePassword": "Modifier le mot de passe",
+      "delete": "Supprimer définitivement"
+    }
+  }
+}
+</i18n>

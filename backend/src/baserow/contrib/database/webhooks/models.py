@@ -67,9 +67,6 @@ class TableWebhookEvent(CreatedAndUpdatedOnMixin, models.Model):
     )
     event_type = models.CharField(max_length=50)
 
-    class Meta:
-        ordering = ("id",)
-
 
 class TableWebhookHeader(models.Model):
     webhook = models.ForeignKey(
@@ -77,9 +74,6 @@ class TableWebhookHeader(models.Model):
     )
     name = models.TextField(validators=[header_name_validator])
     value = models.TextField(validators=[header_value_validator])
-
-    class Meta:
-        ordering = ("id",)
 
 
 class TableWebhookCall(models.Model):

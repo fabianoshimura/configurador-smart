@@ -97,3 +97,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "previewAny":{
+      "externalWarning": "Opening your file via an external service exposes your file to their servers."
+    }
+  },
+  "fr":{
+    "previewAny":{
+      "externalWarning": "Ouvrir un fichier via un service externe expose votre fichier à leurs serveurs."
+    }
+  }
+}
+</i18n>

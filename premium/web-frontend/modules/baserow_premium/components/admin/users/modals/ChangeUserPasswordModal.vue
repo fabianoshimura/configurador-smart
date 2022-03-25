@@ -51,3 +51,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "changeUserPasswordModal": {
+      "changePassword": "Change password for {username}"
+    }
+  },
+  "fr": {
+    "changeUserPasswordModal": {
+      "changePassword": "Changer le mot de passe pour {username}"
+    }
+  }
+}
+</i18n>

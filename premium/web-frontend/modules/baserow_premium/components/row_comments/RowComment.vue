@@ -49,3 +49,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "rowComment": {
+      "you": "You"
+    }
+  },
+  "fr": {
+    "rowComment": {
+      "you": "Vous"
+    }
+  }
+}
+</i18n>

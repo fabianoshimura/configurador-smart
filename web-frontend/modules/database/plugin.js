@@ -153,19 +153,8 @@ import {
   BaserowFormulaTextType,
 } from '@baserow/modules/database/formula/formulaTypes'
 
-import en from '@baserow/modules/database/locales/en.json'
-import fr from '@baserow/modules/database/locales/fr.json'
-
 export default (context) => {
-  const { store, app, isDev } = context
-
-  // Allow locale file hot reloading in dev
-  if (isDev && app.i18n) {
-    const { i18n } = app
-    i18n.mergeLocaleMessage('en', en)
-    i18n.mergeLocaleMessage('fr', fr)
-  }
-
+  const { store, app } = context
   store.registerModule('table', tableStore)
   store.registerModule('view', viewStore)
   store.registerModule('field', fieldStore)

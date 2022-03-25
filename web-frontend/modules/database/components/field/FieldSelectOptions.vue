@@ -113,3 +113,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "fieldSelectOptions": {
+      "add": "Add an option"
+    }
+  },
+  "fr": {
+    "fieldSelectOptions": {
+      "add": "Ajouter une option"
+    }
+  }
+}
+</i18n>

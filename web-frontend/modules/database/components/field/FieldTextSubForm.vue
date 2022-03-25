@@ -37,3 +37,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "fieldTextSubForm": {
+      "placeholder": "Default text"
+    }
+  },
+  "fr": {
+    "fieldTextSubForm": {
+      "placeholder": "Texte par défault"
+    }
+  }
+}
+</i18n>

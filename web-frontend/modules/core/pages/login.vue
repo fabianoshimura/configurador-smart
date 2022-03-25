@@ -3,12 +3,10 @@
     <div class="box__head">
       <h1 class="box__head-title">
         <nuxt-link :to="{ name: 'index' }">
-          <!-- Flag_Fabiano: Login -->
-          Configurador Smart
-          <!-- <img src="@baserow/modules/core/static/img/logo-cidadesp-header.png" alt="" /> -->
+          <img src="@baserow/modules/core/static/img/logo.svg" alt="" />
         </nuxt-link>
       </h1>
-      <!-- <LangPicker /> -->
+      <LangPicker />
     </div>
     <AuthLogin :invitation="invitation" @success="success">
       <ul class="action__links">
@@ -66,3 +64,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "login": {
+      "title": "Login",
+      "forgotPassword": "Forgot password"
+    }
+  },
+  "fr": {
+    "login": {
+      "title": "Identification",
+      "forgotPassword": "Mot de passe oublié"
+    }
+  }
+}
+</i18n>

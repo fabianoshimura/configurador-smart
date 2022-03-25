@@ -61,3 +61,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "restoreNotification": {
+      "restore": "Restore deleted {type}"
+    }
+  },
+  "fr": {
+    "restoreNotification": {
+      "restore": "Restaurer l'élément {type} supprimé"
+    }
+  }
+}
+</i18n>

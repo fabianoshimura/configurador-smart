@@ -25,18 +25,16 @@
     >
       {{ $t('exportTableLoadingBar.export') }}
     </button>
-    <DownloadLink
+    <a
       v-else
       class="
         button button--large button--success
         export-table-modal__export-button
       "
-      :url="job.url"
-      :filename="filename"
-      :loading-class="'button--loading'"
+      :href="`${job.url}?dl=${filename}`"
     >
       {{ $t('exportTableLoadingBar.download') }}
-    </DownloadLink>
+    </a>
   </div>
 </template>
 
@@ -77,3 +75,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "exportTableLoadingBar": {
+      "export": "Export",
+      "download": "Download"
+    }
+  },
+  "fr": {
+    "exportTableLoadingBar": {
+      "export": "Exporter",
+      "download": "Télécharger"
+    }
+  }
+}
+</i18n>

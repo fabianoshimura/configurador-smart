@@ -86,13 +86,12 @@
           </li>
         </ul>
         <ul v-if="preview" class="file-field-modal__actions">
-          <DownloadLink
+          <a
+            :href="preview.url + `?dl=${preview.visible_name}`"
             class="file-field-modal__action"
-            :url="preview.url"
-            :filename="preview.visible_name"
-            :loading-class="'file-field-modal__action--loading'"
-            ><i class="fas fa-download"></i
-          ></DownloadLink>
+          >
+            <i class="fas fa-download"></i>
+          </a>
           <a
             v-if="!readOnly"
             class="file-field-modal__action"

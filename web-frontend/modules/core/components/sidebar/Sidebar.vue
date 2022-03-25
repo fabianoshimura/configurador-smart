@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <div class="sidebar__inner">
-      <!-- <a
+      <a
         ref="userContextAnchor"
         class="sidebar__user"
         @click="
@@ -26,7 +26,7 @@
           </div>
           <div class="sidebar__user-email">{{ email }}</div>
         </div>
-      </a> -->
+      </a>
       <Context ref="userContext">
         <div class="context__menu-title">{{ name }}</div>
         <ul class="context__menu">
@@ -78,7 +78,7 @@
             </div>
           </li>
           <li v-if="isStaff" class="tree__item">
-            <!-- <div
+            <div
               class="tree__action sidebar__action"
               :class="{ 'tree__action--disabled': isAdminPage }"
             >
@@ -88,7 +88,7 @@
                   $t('sidebar.admin')
                 }}</span>
               </a>
-            </div> -->
+            </div>
             <ul v-show="isAdminPage" class="tree sidebar__tree">
               <SidebarAdminItem
                 v-for="adminType in sortedAdminTypes"
@@ -117,7 +117,7 @@
                 <GroupsContext ref="groupSelect"></GroupsContext>
               </div>
             </li>
-            <!-- <li v-if="selectedGroup.permissions === 'ADMIN'" class="tree__item">
+            <li v-if="selectedGroup.permissions === 'ADMIN'" class="tree__item">
               <div class="tree__action">
                 <a class="tree__link" @click="$refs.groupMembersModal.show()">
                   <i class="tree__icon tree__icon--type fas fa-users"></i>
@@ -129,7 +129,7 @@
                   :group="selectedGroup"
                 ></GroupMembersModal>
               </div>
-            </li> -->
+            </li>
             <ul class="tree">
               <component
                 :is="getApplicationComponent(application)"
@@ -183,13 +183,13 @@
                 <i class="tree__right-icon fas fa-arrow-right"></i>
               </div>
             </li>
-            <!-- <li class="sidebar__new-wrapper">
+            <li class="sidebar__new-wrapper">
               <a class="sidebar__new" @click="$refs.createGroupModal.show()">
                 <i class="fas fa-plus"></i>
                 {{ $t('sidebar.createGroup') }}
               </a>
             </li>
-            <CreateGroupModal ref="createGroupModal"></CreateGroupModal> -->
+            <CreateGroupModal ref="createGroupModal"></CreateGroupModal>
           </template>
         </ul>
       </div>
@@ -197,7 +197,7 @@
         <div class="sidebar__logo">
           <img
             height="14"
-            src="https://blogdoaftm.com.br/wp-content/uploads/2019/08/prefeitura-de-sp.jpg"
+            src="@baserow/modules/core/static/img/logo.svg"
             alt="Baserow logo"
           />
         </div>
@@ -330,3 +330,32 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "sidebar":{
+      "createGroup": "Create group",
+      "inviteOthers": "Invite others",
+      "logoff": "Logoff",
+      "errorNoGroup": "You don’t have any groups.",
+      "admin": "Admin",
+      "dashboard": "Dashboard",
+      "trash": "Trash",
+      "settings": "Settings"
+    }
+  },
+  "fr":{
+    "sidebar":{
+      "createGroup": "Créer un groupe",
+      "inviteOthers": "Envoyer une invitation",
+      "logoff": "Se déconnecter",
+      "errorNoGroup": "Vous n'avez aucun groupe.",
+      "admin": "Administration",
+      "dashboard": "Accueil",
+      "trash": "Corbeille",
+      "settings": "Mon compte"
+    }
+  }
+}
+</i18n>

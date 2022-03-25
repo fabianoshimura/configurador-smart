@@ -2,12 +2,23 @@ import path from 'path'
 
 import { routes } from './routes'
 
-import en from './locales/en.json'
-import fr from './locales/fr.json'
+import en from './locales/en'
+import fr from './locales/fr'
 
 export default function () {
-  this.nuxt.hook('i18n:extend-messages', (additionalMessages) => {
-    additionalMessages.push({ en, fr })
+  this.nuxt.hook('i18n:extend-messages', function (additionalMessages) {
+    additionalMessages.push({
+      en: {
+        premium: {
+          ...en,
+        },
+      },
+      fr: {
+        premium: {
+          ...fr,
+        },
+      },
+    })
   })
 
   // Register new alias to the web-frontend directory.

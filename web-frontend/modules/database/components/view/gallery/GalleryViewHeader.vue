@@ -148,3 +148,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "galleryViewHeader":{
+      "customizeCards": "Customize cards"
+    }
+  },
+  "fr":{
+    "galleryViewHeader":{
+      "customizeCards": "Configurer les cartes"
+    }
+  }
+}
+</i18n>

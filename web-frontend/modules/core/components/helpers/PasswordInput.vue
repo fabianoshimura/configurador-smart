@@ -80,3 +80,19 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en":{
+    "error":{
+      "inputRequired": "Input is required."
+
+    }
+  },
+  "fr": {
+    "error":{
+      "inputRequired": "Ce champ est obligatoire."
+    }
+  }
+}
+</i18n>

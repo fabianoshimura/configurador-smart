@@ -67,3 +67,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "templateCategories": {
+      "search": "Search templates",
+      "title": "Templates"
+    }
+  },
+  "fr": {
+    "templateCategories": {
+      "search": "Chercher des modèles",
+      "title": "Modèles"
+    }
+  }
+}
+</i18n>

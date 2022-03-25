@@ -53,3 +53,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "exporterTypeChoices": {
+      "formatLabel": "To which format would you like to export?"
+    }
+  },
+  "fr": {
+    "exporterTypeChoices": {
+      "formatLabel": "Vers quel format souhaitez-vous réaliser l'export ?"
+    }
+  }
+}
+</i18n>

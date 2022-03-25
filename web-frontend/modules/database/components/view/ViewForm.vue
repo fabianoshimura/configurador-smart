@@ -48,3 +48,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "viewForm": {
+      "name": "Name"
+    }
+  },
+  "fr": {
+    "viewForm": {
+      "name": "Nom"
+    }
+  }
+}
+</i18n>

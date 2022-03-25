@@ -13,3 +13,20 @@ export default {
   name: 'ConnectingNotification',
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "connectingNotification": {
+      "title": "Reconnecting",
+      "content": "Reconnecting with server."
+    }
+  },
+  "fr": {
+    "connectingNotification": {
+      "title": "Reconnexion en cours",
+      "content": "Reconnexion avec le serveur en cours"
+    }
+  }
+}
+</i18n>

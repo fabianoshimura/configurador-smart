@@ -33,3 +33,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "copied": {
+      "label": "Copied!"
+    }
+  },
+  "fr": {
+    "copied": {
+      "label": "Copié !"
+    }
+  }
+}
+</i18n>

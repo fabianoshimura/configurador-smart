@@ -694,11 +694,11 @@ class FieldType(
             return str(human_readable_value)
 
     # noinspection PyMethodMayBeStatic
-    def get_other_fields_to_trash_restore_always_together(self, field) -> List[Any]:
+    def get_related_fields_to_trash_and_restore(self, field) -> List[Any]:
         """
         When a field of this type is trashed/restored, or the table it is in
-        trashed/restored, this method should return any other trashable fields that
-        must always be trashed or restored in tandem with this field.
+        trashed/restored, this method should return any other trashable items that
+        should be trashed or restored in tandem.
 
         For example, a link field has an opposing link field in the other table that
         should also be trashed when it is trashed. And so for link fields this method
@@ -706,7 +706,7 @@ class FieldType(
 
         :param field: The specific instance of the field that is being trashed or whose
             table is being trashed.
-        :return: A list of related fields that should be trashed or restored
+        :return: A list of related trashable items that should be trashed or restored
             in tandem with this field or it's table.
         """
 
@@ -1061,19 +1061,6 @@ class FieldType(
         :param to_delete: A list of option ids that are removed from the field
             option list.
         """
-
-    # noinspection PyMethodMayBeStatic
-    def before_table_model_invalidated(
-        self,
-        field: Field,
-    ):
-        """
-        Called before the table the field is in is invalidated in the model cache.
-        Usually this method should be overridden to also invalidate the cache of other
-        tables models which would be affected by this tables cache being invalidated.
-        """
-
-        pass
 
 
 class FieldTypeRegistry(

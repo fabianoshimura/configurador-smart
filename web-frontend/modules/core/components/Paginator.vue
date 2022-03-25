@@ -85,3 +85,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "paginator": {
+      "page": "page",
+      "of": "of {pages}"
+    }
+  },
+  "fr": {
+    "paginator": {
+      "page": "page",
+      "of": "sur {pages}"
+    }
+  }
+}
+</i18n>

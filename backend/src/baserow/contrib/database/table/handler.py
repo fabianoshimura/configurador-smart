@@ -247,7 +247,7 @@ class TableHandler:
         view_handler = ViewHandler()
         field_handler = FieldHandler()
 
-        view = view_handler.create_view(user, table, GridViewType.type, name="Visualização Atual")
+        view = view_handler.create_view(user, table, GridViewType.type, name="Grid")
         notes = field_handler.create_field(
             user, table, LongTextFieldType.type, name="Notes"
         )
@@ -260,8 +260,8 @@ class TableHandler:
         view_handler.update_field_options(user, view, field_options, fields=fields)
 
         model = table.get_model(attribute_names=True)
-        model.objects.create(name="Ivan", active=True, order=1)
-        model.objects.create(name="Fabiano", active=False, order=2)
+        model.objects.create(name="Tesla", active=True, order=1)
+        model.objects.create(name="Amazon", active=False, order=2)
 
     def update_table(self, user, table, **kwargs):
         """

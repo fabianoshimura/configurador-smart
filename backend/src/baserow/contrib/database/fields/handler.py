@@ -10,7 +10,6 @@ from baserow.contrib.database.db.schema import lenient_schema_editor
 from baserow.contrib.database.fields.constants import RESERVED_BASEROW_FIELD_NAMES
 from baserow.contrib.database.table.models import Table
 from baserow.contrib.database.views.handler import ViewHandler
-from baserow.core.trash.exceptions import RelatedTableTrashedException
 from baserow.core.trash.handler import TrashHandler
 from baserow.core.utils import extract_allowed, set_allowed_attrs
 from .dependencies.handler import FieldDependencyHandler
@@ -230,7 +229,6 @@ class FieldHandler:
             )
 
         updated_fields = update_collector.apply_updates_and_get_updated_fields()
-
         field_created.send(
             self,
             field=instance,
@@ -613,10 +611,6 @@ class FieldHandler:
         if instance_to_create:
             SelectOption.objects.bulk_create(instance_to_create)
 
-        # The model has changed when the select options have changed, so we need to
-        # invalidate the model cache.
-        field.invalidate_table_model_cache()
-
     # noinspection PyMethodMayBeStatic
     def find_next_unused_field_name(
         self,
@@ -705,31 +699,12 @@ class FieldHandler:
 
     def restore_field(
         self,
-        field: Field,
-        update_collector: Optional[CachingFieldUpdateCollector] = None,
-        apply_and_send_updates: bool = True,
+        field,
+        update_collector=None,
+        apply_and_send_updates=True,
     ):
-        """
-        Restores the provided field from being in the trashed state.
-
-        :param field: The trashed field to restore.
-        :param update_collector: An optional update collector that will be used to
-            collect any resulting field updates due to the restore.
-        :param apply_and_send_updates: Whether or not a field_restored signal should be
-            sent after restoring this field.
-        :raises CantRestoreTrashedItem: Raised when this field cannot yet be restored
-            due to other trashed items.
-        """
-
         field_type = field_type_registry.get_by_model(field)
         try:
-            other_fields_that_must_restore_at_same_time = (
-                field_type.get_other_fields_to_trash_restore_always_together(field)
-            )
-            for other_required_field in other_fields_that_must_restore_at_same_time:
-                if other_required_field.table.trashed:
-                    raise RelatedTableTrashedException()
-
             field.name = self.find_next_unused_field_name(
                 field.table,
                 [field.name, f"{field.name} (Restored)"],
@@ -744,7 +719,6 @@ class FieldHandler:
             if update_collector is None:
                 update_collector = CachingFieldUpdateCollector(field.table)
             field.save(field_lookup_cache=update_collector)
-
             FieldDependencyHandler.rebuild_dependencies(field, update_collector)
             for (
                 dependant_field,
@@ -764,9 +738,11 @@ class FieldHandler:
                 )
                 update_collector.send_additional_field_updated_signals()
 
-            for other_required_field in other_fields_that_must_restore_at_same_time:
-                if other_required_field.trashed:
-                    self.restore_field(other_required_field)
+            for related_field in field_type.get_related_fields_to_trash_and_restore(
+                field
+            ):
+                if related_field.trashed:
+                    self.restore_field(related_field)
         except Exception as e:
             # Restoring a field could result in various errors such as a circular
             # dependency appearing in the field dep graph. Allow the field type to

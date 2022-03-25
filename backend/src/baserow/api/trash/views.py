@@ -29,7 +29,6 @@ from baserow.core.trash.exceptions import (
     CannotRestoreChildBeforeParent,
     ParentIdMustNotBeProvidedException,
     ParentIdMustBeProvidedException,
-    RelatedTableTrashedException,
 )
 
 from .errors import (
@@ -37,7 +36,6 @@ from .errors import (
     ERROR_PARENT_ID_MUST_NOT_BE_PROVIDED,
     ERROR_PARENT_ID_MUST_BE_PROVIDED,
     ERROR_TRASH_ITEM_DOES_NOT_EXIST,
-    ERROR_CANT_RESTORE_AS_RELATED_TABLE_TRASHED,
 )
 from .serializers import (
     TrashContentsSerializer,
@@ -63,7 +61,6 @@ class TrashItemView(APIView):
                     "ERROR_CANNOT_RESTORE_PARENT_BEFORE_CHILD",
                     "ERROR_PARENT_ID_MUST_NOT_BE_PROVIDED",
                     "ERROR_PARENT_ID_MUST_BE_PROVIDED",
-                    "ERROR_CANT_RESTORE_AS_RELATED_TABLE_TRASHED",
                 ]
             ),
         },
@@ -76,7 +73,6 @@ class TrashItemView(APIView):
             CannotRestoreChildBeforeParent: ERROR_CANNOT_RESTORE_PARENT_BEFORE_CHILD,
             ParentIdMustNotBeProvidedException: ERROR_PARENT_ID_MUST_NOT_BE_PROVIDED,
             ParentIdMustBeProvidedException: ERROR_PARENT_ID_MUST_BE_PROVIDED,
-            RelatedTableTrashedException: ERROR_CANT_RESTORE_AS_RELATED_TABLE_TRASHED,
         }
     )
     def patch(self, request, data):

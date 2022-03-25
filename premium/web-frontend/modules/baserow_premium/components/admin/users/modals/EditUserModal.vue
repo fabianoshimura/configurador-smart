@@ -71,3 +71,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "editUserModal": {
+      "delete": "Delete user",
+      "edit": "Edit { username }"
+    }
+  },
+  "fr": {
+    "editUserModal": {
+      "delete": "Supprimer l'utilisateur",
+      "edit": "Modifier {username}"
+    }
+  }
+}
+</i18n>

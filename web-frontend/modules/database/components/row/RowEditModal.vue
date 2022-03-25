@@ -160,3 +160,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "rowEditModal": {
+      "addField": "add field"
+    }
+  },
+  "fr": {
+    "rowEditModal": {
+      "addField": "Ajouter un champ"
+    }
+  }
+}
+</i18n>

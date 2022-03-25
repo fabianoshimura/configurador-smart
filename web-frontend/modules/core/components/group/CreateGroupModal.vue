@@ -50,3 +50,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "createGroupModal": {
+      "createNew": "Create new group",
+      "add": "Add group"
+    }
+  },
+  "fr": {
+    "createGroupModal": {
+      "createNew": "Nouveau groupe",
+      "add": "Ajouter le groupe"
+    }
+  }
+}
+</i18n>

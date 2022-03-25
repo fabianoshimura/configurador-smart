@@ -103,3 +103,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "trashSidebar": {
+      "title": "Trash",
+      "unnamedGroup": "Unnamed group {id}"
+    }
+  },
+  "fr": {
+    "trashSidebar": {
+      "title": "Corbeille",
+      "unnamedGroup": "Groupe sans nom {id}"
+    }
+  }
+}
+</i18n>

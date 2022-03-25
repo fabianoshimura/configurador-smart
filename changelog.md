@@ -2,13 +2,6 @@
 
 ## Unreleased
 
-* Cache model fields when generating model.
-* Fixed `'<' not supported between instances of 'NoneType' and 'int'` error. Blank 
-  string for a decimal value is now converted to `None` when using the REST API.
-* Moved the in component `<i18n>` translations to JSON files. 
-* Fix restoring table linking to trashed tables creating invalid link field. 
-* Fixed not being able to create or convert a single select field with edge case name.
-
 ## Released (2022-01-13 1.8.2)
 
 * Fix Table Export showing blank modal.
@@ -18,7 +11,6 @@
 
 * Fixed migration failing when upgrading a version of Baserow installed using Postgres 
   10 or lower.
-* Fixed download/preview files from another origin
 
 ## Released (2022-01-13)
 

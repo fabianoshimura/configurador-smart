@@ -94,3 +94,20 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "activeUsers": {
+      "newUsers": "New users",
+      "activeUsers": "Active users"
+    }
+  },
+  "fr": {
+    "activeUsers": {
+      "newUsers": "Nouveaux utilisateurs",
+      "activeUsers": "Utilisateurs actifs"
+    }
+  }
+}
+</i18n>

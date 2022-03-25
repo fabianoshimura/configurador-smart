@@ -42,3 +42,18 @@ export default {
   },
 }
 </script>
+
+<i18n>
+{
+  "en": {
+    "tableJSONExporter": {
+      "encoding": "Encoding"
+    }
+  },
+  "fr": {
+    "tableJSONExporter": {
+      "encoding": "Encodage"
+    }
+  }
+}
+</i18n>
