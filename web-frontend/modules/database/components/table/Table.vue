@@ -7,7 +7,8 @@
     >
       <div v-show="tableLoading" class="header__loading"></div>
       <ul v-if="!tableLoading" class="header__filter">
-        <li class="header__filter-item header__filter-item--grids">
+        <!-- Flag_Fabiano: Tirando fora o "Grid" -->
+        <!-- <li class="header__filter-item header__filter-item--grids">
           <a
             ref="viewsSelectToggle"
             class="header__filter-link"
@@ -45,8 +46,8 @@
             :header-overflow="headerOverflow"
             @selected-view="$emit('selected-view', $event)"
           ></ViewsContext>
-        </li>
-        <li
+        </li> -->
+        <!-- <li
           v-if="hasSelectedView && !readOnly"
           class="header__filter-item header__filter-item--no-margin-left"
         >
@@ -70,7 +71,7 @@
             @enable-rename="$refs.rename.edit()"
           >
           </ViewContext>
-        </li>
+        </li> -->
         <li
           v-if="hasSelectedView && view._.type.canFilter"
           class="header__filter-item"
@@ -97,12 +98,14 @@
             @changed="refresh()"
           ></ViewSort>
         </li>
-        <li
+
+        <!-- Flag_Fabiano: Retirando botão Share -->
+        <!-- <li
           v-if="hasSelectedView && view._.type.canShare && !readOnly"
           class="header__filter-item"
         >
           <ShareViewLink :view="view" :read-only="readOnly"></ShareViewLink>
-        </li>
+        </li> -->
       </ul>
       <component
         :is="getViewHeaderComponent(view)"

@@ -6,6 +6,83 @@
         dashboard__alert
       "
     >
+      <!-- <div class="alert__icon">
+        <i class="fas fa-file-spreadsheet"></i>
+      </div> -->
+
+      <!--<div class="alert__title">{{ $t('dashboard.alertTitle') }}</div>
+      <p class="alert__content">
+        {{ $t('dashboard.alertText') }}
+      </p>-->
+      <!-- <a
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        {{ $t('dashboard.becomeGithubSponsor') }}
+        <i class="fa fa-heart"></i>
+      </a> -->
+      <!-- <a
+        href="https://gitlab.com/bramw/baserow"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        {{ $t('dashboard.starOnGitlab') }}
+        <i class="fab fa-gitlab"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnTwitter')"
+        :href="
+          'https://twitter.com/intent/tweet?url=https://baserow.io' +
+          '&hashtags=opensource,nocode,database,baserow&text=' +
+          encodeURI($t('dashboard.tweetContent'))
+        "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-twitter"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnReddit')"
+        :href="
+          'https://www.reddit.com/submit?url=https://baserow.io&title=' +
+          encodeURI($t('dashboard.redditTitle'))
+        "
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-reddit"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnFacebook')"
+        href="https://www.facebook.com/sharer/sharer.php?u=https://baserow.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-facebook"></i>
+      </a> -->
+      <!-- <a
+        v-tooltip="$t('dashboard.shareOnLinkedIn')"
+        href="https://www.linkedin.com/sharing/share-offsite/?url=https://baserow.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button--primary dashboard__alert-button"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a> -->
+    </div>
+
+    <!-- <div
+      class="
+        alert alert--simple alert--warning alert--has-icon
+        dashboard__alert
+      "
+    >
       <div class="alert__icon">
         <i class="fas fa-exclamation"></i>
       </div>
@@ -74,7 +151,8 @@
       >
         <i class="fab fa-linkedin"></i>
       </a>
-    </div>
+    </div> -->
+
     <GroupInvitation
       v-for="invitation in groupInvitations"
       :key="'invitation-' + invitation.id"
@@ -102,12 +180,12 @@
         :key="group.id"
         :group="group"
       ></DashboardGroup>
-      <div>
+      <!-- <div>
         <a class="button button--large" @click="$refs.createGroupModal.show()">
           <i class="fas fa-plus"></i>
           {{ $t('dashboard.createGroup') }}
         </a>
-      </div>
+      </div> -->
     </div>
     <CreateGroupModal ref="createGroupModal"></CreateGroupModal>
   </div>
@@ -165,44 +243,3 @@ export default {
   },
 }
 </script>
-
-<i18n>
-{
-  "en":{
-    "dashboard":{
-      "title": "Dashboard",
-      "alertTitle": "We need your help!",
-      "alertText": "If you find Baserow useful then sponsoring, starring or sharing us is greatly appreciated. By sponsoring us on GitHub you will get early access to the premium features!",
-      "tweetContent": "Check out @baserow an open source no-code database tool and Airtable alternative!",
-      "redditTitle": "'Baserow - An open source no-code database",
-      "noGroupTitle": "No groups found",
-      "noGroupText": "You aren’t a member of any group. Applications like databases belong to a group, so in order to create them you need to create a group.",
-      "createGroup": "Create group",
-      "becomeGithubSponsor": "Become a GitHub sponsor",
-      "starOnGitlab": "Star us on Gitlab",
-      "shareOnTwitter":"Tweet about Baserow",
-      "shareOnReddit": "Share on Reddit",
-      "shareOnFacebook": "Share on Facebook",
-      "shareOnLinkedIn": "Share on LinkedIn"
-    }
-  },
-  "fr":{
-    "dashboard":{
-      "title": "Accueil",
-      "alertTitle": "Soutenez-nous !",
-      "alertText": "Si vous trouvez Baserow utile, n'hésitez pas à nous sponsoriser, étoiler, partager :",
-      "tweetContent": "Découvrez @baserow, une base de données no-code libre, une alternative à Airtable",
-      "redditTitle": "Baserow - Une base de données no-code libre",
-      "noGroupTitle": "Aucun groupe",
-      "noGroupText": "Vous n'êtes membre d'aucun groupe. Les applications telles que les bases de données doivent appartenir à un groupe, donc pour pouvoir en créer, vous devez créer au moins un groupe.",
-      "createGroup": "Créer un groupe",
-      "becomeGithubSponsor": "Devenir sponsor Github",
-      "starOnGitlab": "Nous étoiler sur Gitlab",
-      "shareOnTwitter":"Tweeter à propos de Baserow",
-      "shareOnReddit": "Partager sur Reddit",
-      "shareOnFacebook": "Partager sur Facebook",
-      "shareOnLinkedIn": "Partager sur LinkedIn"
-    }
-  }
-}
-</i18n>

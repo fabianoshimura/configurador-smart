@@ -119,11 +119,11 @@
             </li>
             <li v-if="selectedGroup.permissions === 'ADMIN'" class="tree__item">
               <div class="tree__action">
-                <a class="tree__link" @click="$refs.groupMembersModal.show()">
+                <!-- <a class="tree__link" @click="$refs.groupMembersModal.show()">
                   <i class="tree__icon tree__icon--type fas fa-users"></i>
 
                   {{ $t('sidebar.inviteOthers') }}
-                </a>
+                </a> -->
                 <GroupMembersModal
                   ref="groupMembersModal"
                   :group="selectedGroup"

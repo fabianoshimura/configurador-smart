@@ -29,12 +29,13 @@
             {{ $t('sidebarItem.exportTable') }}
           </a>
         </li>
-        <li>
+        <!-- Flag_Fabiano: retirando o Webhook -->
+        <!-- <li>
           <a @click="openWebhookModal()">
             <i class="context__menu-icon fas fa-fw fa-globe"></i>
             Webhooks
           </a>
-        </li>
+        </li> -->
         <li>
           <a @click="enableRename()">
             <i class="context__menu-icon fas fa-fw fa-pen"></i>
@@ -168,18 +169,3 @@ export default {
   },
 }
 </script>
-
-<i18n>
-{
-  "en":{
-    "sidebarItem":{
-      "exportTable": "Export table"
-    }
-  },
-  "fr":{
-    "sidebarItem":{
-      "exportTable": "Exporter la table"
-    }
-  }
-}
-</i18n>

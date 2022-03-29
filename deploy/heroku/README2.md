@@ -20,7 +20,7 @@ $ heroku addons:create -a configurador-smart mailgun:starter
 $ heroku labs:enable -a configurador-smart runtime-dyno-metadata
 
 # Finally we need to set all the environment variables listed in the app.json file.
-$ heroku config:set -a configurador-smart SECRET_KEY=REPLACE_WITH_SECRET_VALUE
+$ heroku config:set -a configurador-smart SECRET_KEY=smped2020
 $ heroku config:set -a configurador-smart BASEROW_PUBLIC_URL=https://configurador-smart.herokuapp.com
 $ heroku config:set -a configurador-smart BASEROW_AMOUNT_OF_WORKERS=1
 ```
@@ -30,5 +30,5 @@ by pushing to the heroku remote repository.
 
 ```
 $ git remote add heroku https://git.heroku.com/configurador-smart.git
-$ git push heroku master
+$ git push heroku main
 ```
