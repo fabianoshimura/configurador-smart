@@ -31,4 +31,7 @@ by pushing to the heroku remote repository.
 ```
 $ git remote add heroku https://git.heroku.com/configurador-smart.git
 $ git push heroku main
-```
+
+
+git push heroku heroku-deploy-personalizado:main 
+
